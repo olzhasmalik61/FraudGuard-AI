@@ -1,9 +1,11 @@
 **FraudGuard AI — Transaction Fraud Detection
 **
+
 > Binary classification system for detecting fraudulent financial transactions on a severely imbalanced dataset (~0.17% fraud rate). Built as an end-to-end ML experimentation project covering baseline modeling, threshold optimization, imbalance handling, feature selection, and business-oriented evaluation.
 
 **Project Overview
 **
+
 Financial fraud detection presents a core ML challenge: class imbalance so extreme that a model predicting "not fraud" on every transaction achieves >99% accuracy while catching zero fraud. This project addresses that challenge through iterative experimentation with model selection, probability thresholds, cost-sensitive weighting, and evaluation metrics appropriate for rare-event classification.
 
 **Dataset:** [Credit Card Fraud Detection — Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
