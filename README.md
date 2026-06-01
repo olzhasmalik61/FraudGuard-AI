@@ -14,8 +14,8 @@ Financial fraud detection presents a core ML challenge: class imbalance so extre
 
 | Metric | Logistic Regression (baseline) | XGBoost (tuned) |
 |---|---|---|
-| ROC-AUC | N/A | ~0.97 |
-| PR-AUC | N/A | ~0.81 |
+| ROC-AUC | ~0.95 | ~0.97 |
+| PR-AUC | ~0.745 | ~0.81 |
 | Fraud Recall | ~65% | ~88% |
 | Threshold | 0.50 | 0.20 |
 
