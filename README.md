@@ -17,8 +17,8 @@ Financial fraud detection presents a core ML challenge: class imbalance so extre
 
 | Metric | Logistic Regression (baseline) | XGBoost (tuned) |
 |---|---|---|
-| ROC-AUC | ~0.97 | ~0.97 |
-| PR-AUC | ~0.71 | ~0.81 |
+| ROC-AUC | N/A | ~0.97 |
+| PR-AUC | N/A | ~0.81 |
 | Fraud Recall | ~65% | ~88% |
 | Threshold | 0.50 | 0.20 |
 
@@ -101,7 +101,7 @@ Used metrics appropriate for imbalanced binary classification:
 **How to Run
 **
 ```bash
-git clone https://github.com/yourusername/fraudguard-ai
+git clone https://github.com/olzhasmalik61/fraudguard-ai
 cd fraudguard-ai
 pip install -r requirements.txt
 ```
