@@ -1,10 +1,8 @@
-**FraudGuard AI — Transaction Fraud Detection
-**
+**FraudGuard AI — Transaction Fraud Detection**
 
 > Binary classification system for detecting fraudulent financial transactions on a severely imbalanced dataset (~0.17% fraud rate). Built as an end-to-end ML experimentation project covering baseline modeling, threshold optimization, imbalance handling, feature selection, and business-oriented evaluation.
 
-**Project Overview
-**
+**Project Overview**
 
 Financial fraud detection presents a core ML challenge: class imbalance so extreme that a model predicting "not fraud" on every transaction achieves >99% accuracy while catching zero fraud. This project addresses that challenge through iterative experimentation with model selection, probability thresholds, cost-sensitive weighting, and evaluation metrics appropriate for rare-event classification.
 
@@ -12,8 +10,7 @@ Financial fraud detection presents a core ML challenge: class imbalance so extre
 - 284,807 transactions | 492 fraud cases | ~0.17% fraud rate
 - 28 PCA-anonymized features (V1–V28) + `Time`, `Amount`, `Class`
 
-**Results Summary
-**
+**Results Summary**
 
 | Metric | Logistic Regression (baseline) | XGBoost (tuned) |
 |---|---|---|
@@ -80,16 +77,14 @@ Used metrics appropriate for imbalanced binary classification:
 | **Precision** | Operational cost — what % of flagged transactions are actual fraud? |
 | **Confusion Matrix** | Visualizes false negatives (missed fraud) vs false positives (false alerts) |
 
-**Key Technical Insights
-**
+**Key Technical Insights**
 **Threshold tuning is a business decision, not just a modeling one.** In fraud detection, the cost of missing fraud (false negative) typically exceeds the cost of a false alert (false positive). Lowering the classification threshold from 0.5 to 0.2 improved fraud recall by ~20 percentage points with a manageable increase in false positives — a tradeoff that maps directly to how fraud teams think about risk tolerance.
 
 **Feature concentration.** Five features (V14, V7, V12, V17, V10) carried the majority of the fraud signal. The reduced-feature model achieved comparable performance to the full 28-feature model, suggesting these features likely correspond to behavioral patterns strongly associated with fraudulent activity in the original (anonymized) feature space.
 
 **PR-AUC over ROC-AUC.** On datasets with extreme class imbalance, ROC-AUC can be misleadingly high because it considers the true negative rate — which is trivially high when 99.8% of data is negative. PR-AUC focuses on precision and recall among predicted positives, making it the more informative metric for this problem.
 
-**Tech Stack
-**
+**Tech Stack**
 | Layer | Tools |
 |---|---|
 | Language | Python 3.x |
@@ -98,8 +93,7 @@ Used metrics appropriate for imbalanced binary classification:
 | Visualization | Matplotlib, Seaborn |
 | Environment | Jupyter Notebook |
 
-**How to Run
-**
+**How to Run**
 ```bash
 git clone https://github.com/olzhasmalik61/fraudguard-ai
 cd fraudguard-ai
@@ -108,7 +102,6 @@ pip install -r requirements.txt
 
 Download the dataset from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place `creditcard.csv` in the project root. Then run notebook.
 
-**Dataset Credit
-**
+**Dataset Credit**
 Kaggle — [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 ULB Machine Learning Group. Real anonymized transaction data from European cardholders (September 2013).
